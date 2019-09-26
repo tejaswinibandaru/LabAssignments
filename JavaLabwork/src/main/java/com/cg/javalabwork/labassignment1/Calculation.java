@@ -10,6 +10,22 @@ public class Calculation {
 		}
 		return sum;
 	}
+	
+	public boolean validateNumber(int number) {
+		int[] numberIntegerArray=new int[10];
+		int i=0;
+		while(number!=0) {
+			numberIntegerArray[i]=number%10;
+			i++;
+			number=number%10;
+		}
+		for(int j=0;j<i;j++) {
+			if(numberIntegerArray[j]>=numberIntegerArray[j+1]) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	public int calculateDifference(int n) {
 		int sum1 = (n * (n + 1) * (2 * n + 1)) / 6;
@@ -28,5 +44,11 @@ public class Calculation {
 		System.out.println(sum);
 		int diff = c.calculateDifference(n);
 		System.out.println(diff);
+		int number=133468;
+		if(c.validateNumber(number)) {
+			System.out.println("Valid number");
+		}else {
+			System.out.println("Not a valid number");
+		}
 	}
 }
