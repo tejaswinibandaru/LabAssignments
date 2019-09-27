@@ -8,8 +8,8 @@ public class Book extends WrittenItem {
 	
 
 
-	public Book(int itemId, String itemName, int itemCount, String author) {
-		super(itemId, itemName, itemCount, author);
+	public Book(int itemId, String itemName, int itemCount, int noOfCopies,String author) {
+		super(itemId, itemName, itemCount, noOfCopies,author);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -18,27 +18,12 @@ public class Book extends WrittenItem {
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
+		System.out.println("Book id: "+this.getItemId());
+		System.out.println("Book title: : "+this.getItemName());
+		System.out.println("Number Of Copies: "+this.getNoOfCopies());
+		System.out.println("Author: "+this.getAuthor());
 
 	}
-
-	@Override
-	public void checkIn() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void checkOut() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void addItem() {
-		// TODO Auto-generated method stub
-
-	}
-	
 	@Override
 	public String toString() {
 		return "Book [getAuthor()=" + getAuthor() + ", toString()=" + super.toString() + ", getItemId()=" + getItemId()

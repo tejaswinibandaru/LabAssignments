@@ -9,33 +9,25 @@ public class Journal extends WrittenItem {
 	}
 	
 
-	public Journal(int itemId, String itemName, int itemCount, String author) {
-		super(itemId, itemName, itemCount, author);
+	public Journal(int itemId, String itemName, int itemCount, int noOfCopies,String author,int publishedYear) {
+		super(itemId, itemName, itemCount, noOfCopies,author);
+		this.publishedYear=publishedYear;
 		// TODO Auto-generated constructor stub
 	}
 
 
+	public int getPublishedYear() {
+		return publishedYear;
+	}
+
+
+	public void setPublishedYear(int publishedYear) {
+		this.publishedYear = publishedYear;
+	}
+
 
 	@Override
 	public void print() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void checkIn() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void checkOut() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void addItem() {
 		// TODO Auto-generated method stub
 
 	}

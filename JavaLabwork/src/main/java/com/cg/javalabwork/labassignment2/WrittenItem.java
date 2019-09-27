@@ -7,8 +7,8 @@ public abstract class WrittenItem extends Item{
 		// TODO Auto-generated constructor stub
 	}
 
-	public WrittenItem(int itemId, String itemName, int itemCount, String author) {
-		super(itemId, itemName, itemCount);
+	public WrittenItem(int itemId, String itemName, int itemCount, int noOfCopies,String author) {
+		super(itemId, itemName, itemCount,noOfCopies);
 		this.author = author;
 	}
 

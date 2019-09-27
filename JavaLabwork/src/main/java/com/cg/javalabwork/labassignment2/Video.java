@@ -11,9 +11,9 @@ public class Video extends MediaItem {
 	}
 	
 	
-	public Video(int itemId, String itemName, int itemCount, int runtime, String director, int releasedYear,
+	public Video(int itemId, String itemName, int itemCount, int runtime,int noOfCopies, String director, int releasedYear,
 			String genre) {
-		super(itemId, itemName, itemCount, runtime);
+		super(itemId, itemName, itemCount, runtime,noOfCopies);
 		this.director = director;
 		this.releasedYear = releasedYear;
 		this.genre = genre;
@@ -25,20 +25,15 @@ public class Video extends MediaItem {
 		// TODO Auto-generated method stub
 	}
 
-	@Override
-	public void checkIn() {
-		// TODO Auto-generated method stub
-	}
 
 	@Override
-	public void checkOut() {
-		// TODO Auto-generated method stub
+	public String toString() {
+		return "Video [director=" + director + ", releasedYear=" + releasedYear + ", genre=" + genre + ", toString()="
+				+ super.toString() + ", getNoOfCopies()=" + getNoOfCopies() + ", getItemId()=" + getItemId()
+				+ ", getItemName()=" + getItemName() + ", getItemCount()=" + getItemCount() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + "]";
 	}
-
-	@Override
-	public void addItem() {
-		// TODO Auto-generated method stub
-	}
+	
 	
 
 }

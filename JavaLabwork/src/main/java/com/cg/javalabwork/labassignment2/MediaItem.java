@@ -10,8 +10,8 @@ public abstract class MediaItem extends Item {
 	
 	
 
-	public MediaItem(int itemId, String itemName, int itemCount, int runtime) {
-		super(itemId, itemName, itemCount);
+	public MediaItem(int itemId, String itemName, int itemCount, int noOfCopies,int runtime) {
+		super(itemId, itemName, itemCount, noOfCopies);
 		this.runtime = runtime;
 	}
 

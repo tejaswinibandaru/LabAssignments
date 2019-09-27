@@ -3,17 +3,27 @@ package com.cg.javalabwork.labassignment2;
 public abstract class Item {
 	private int itemId;
 	private String itemName;
+	private int noOfCopies;
 	private int itemCount;
 	
 	public Item() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Item(int itemId, String itemName, int itemCount) {
+	public Item(int itemId, String itemName, int itemCount,int noOfCopies) {
 		super();
 		this.itemId = itemId;
 		this.itemName = itemName;
 		this.itemCount = itemCount;
+		this.noOfCopies = noOfCopies;
+	}
+
+	public int getNoOfCopies() {
+		return noOfCopies;
+	}
+
+	public void setNoOfCopies(int noOfCopies) {
+		this.noOfCopies = noOfCopies;
 	}
 
 	public int getItemId() {
@@ -46,7 +56,14 @@ public abstract class Item {
 	}
 	
 	public abstract void print();
-	public abstract void checkIn();
-	public abstract void checkOut();
-	public abstract void addItem();
+	public void checkIn() {
+		this.itemCount=0;
+	}
+	public void checkOut() {
+		this.itemCount=0;
+	}
+	public void addItem(int noOfCopies) {
+		this.itemCount+=noOfCopies;
+		this.noOfCopies-=noOfCopies;
+	}
 }
